@@ -321,7 +321,7 @@ sudo sed -i "s|PIKRELLCAM_WWW|$PWD/www|; \
 if ((DEB_VERSION >= BULLSEYE))
 then
 	sudo sed -i "s/php5/php\/php/" /etc/nginx/sites-available/pikrellcam
-if ((DEB_VERSION >= BUSTER))
+elif ((DEB_VERSION >= BUSTER))
 then
 	sudo sed -i "s/php5/php\/php7.3/" /etc/nginx/sites-available/pikrellcam
 elif ((DEB_VERSION >= STRETCH))
